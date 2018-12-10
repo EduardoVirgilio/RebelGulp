@@ -1,0 +1,589 @@
+$color-marca: #f81e26
+$color-blanco: #f1f1f1
+$color-gris: #717171
+$roboto: 'Roboto', sans-serif
+$circular-book: 'Circular Std Book'
+$circular-black: 'Circular Std Black Italic'
+body
+  padding: 5rem 0rem 0rem 0rem
+  width: 100vw
+  overflow-x: hidden
+  @media (min-width: 992px)
+    padding: 0rem
+#mainNav
+  border-color: rgba($color-gris, 0.1)
+  background-color: $color-marca
+  -webkit-transition: all .35s
+  transition: all .35s
+  font-family: $roboto
+  font-weight: 200
+  letter-spacing: 1px
+  padding: 3rem 1rem
+  .navbar-brand
+    color: $color-blanco
+    font-family: $roboto
+    font-weight: 200
+    letter-spacing: 1px
+    &:hover, &:focus
+      color: darken($color-marca,15%)
+  .navbar-toggler
+    font-size: 3rem
+    padding: 0px 10px
+    color: $color-blanco
+  .navbar-nav > li > a
+    font-size: 11px
+    font-family: $roboto
+    letter-spacing: 2px
+    text-transform: uppercase
+    &.active
+      color: darken($color-marca,15%) !important
+      background-color: transparent
+      &:hover
+        background-color: transparent
+        color: $color-blanco
+    &:focus
+      color: darken($color-marca,15%)
+      &:hover, &:focus:hover
+        color: $color-marca
+  .navbar-shrink > li > a
+    font-size: 11px
+    font-family: $roboto
+    letter-spacing: 2px
+    text-transform: uppercase
+    &.active
+      color: darken($color-marca,15%) !important
+      background-color: transparent
+      &:hover
+        background-color: transparent
+        color: $color-gris
+  &:focus
+    color: darken($color-marca,15%)
+    &:hover, &:focus:hover
+      color: $color-marca
+
+@media (min-width: 992px)
+  #mainNav
+    border-color: transparent
+    background-color: transparent
+    padding: 1rem 1rem
+    .navbar-brand
+      color: $color-marca
+      &:hover, &:focus
+        color: $color-gris
+    .navbar-nav > li > a
+      color: $color-gris
+      font-family: $roboto
+      &:focus
+        color: rgba($color-marca, 0.7)
+      &:hover, &:focus:hover
+        color: rgba($color-marca, 0.7)
+    &.navbar-shrink
+      border-color: rgba($color-gris, 0.1)
+      background-color: $color-blanco
+      .navbar-brand
+        color: $color-blanco
+        &:hover, &:focus
+          color: $color-marca
+      .navbar-nav > li > a
+        color: $color-gris
+        &:focus
+          color: darken($color-gris, 5%)
+        &:hover, &:focus:hover
+          color: $color-marca
+
+/* HOME */
+header.masthead
+  position: relative
+  width: 100vw
+  padding-top: 150px
+  padding-bottom: 100px
+  background: $color-blanco
+  .header-content
+    max-width: 100%
+    margin-bottom: 0px
+    text-align: center
+    h1
+      font-size: 4rem
+      font-family: $circular-book
+      position: relative
+      display: block
+      width: 100%
+      height: 8rem
+      &::before
+        content: url(../images/nombre.png)
+        position: absolute
+        top: -5rem
+        left: 0
+        width: 100%
+      &::after
+        content: ""
+        position: absolute
+        bottom: 1.25rem
+        left: 25%
+        width: 50%
+        height: 1rem
+        background-color: darken($color-gris,35%)
+    p
+      font-size: 2rem
+      font-family: $roboto
+      margin-top: 1.25rem
+    .device-container
+      max-width: 100%
+      margin-right: auto
+      margin-left: auto
+      .screen
+        z-index: 1
+        position: relative
+        img
+          border-radius: 3px
+@media (min-width: 992px)
+  header.masthead
+    height: 100vh
+    min-height: 775px
+    padding-top: 0
+    padding-bottom: 0
+    width: 100vw
+    background: $color-blanco
+    .header-content
+      margin-bottom: 0
+      text-align: left
+      h1
+        font-size: 2rem
+        width: 100%
+        height: 3.5rem
+        &:before
+          top: -3.5rem
+          left: 0rem
+          transform-origin: left bottom
+          transform: scale(.6)
+        &:after
+          content: ""
+          position: absolute
+          bottom: 1rem
+          left: 0
+          width: 15%
+          height: .25rem
+          background-color: darken($color-gris,35%)
+      h2
+        height: 10rem
+        font-size: 2.7rem
+        color: $color-marca
+        font-family: $circular-black
+      p
+        font-size: 1.25rem
+        font-family: $roboto
+        margin: .312rem 0rem 0rem 0rem
+    .device-container
+      max-width: 100%
+/*Nosotros*/
+#nosotros
+  height: 100vh
+  min-height: 775px
+  padding-top: 6rem
+  padding-bottom: 0
+  figure
+    position: relative
+    z-index: 0
+    &::before
+      content: ""
+      width: 100%
+      height: 100%
+      background-color: $color-marca
+      position: absolute
+      top: -6rem
+      left: -5rem
+      z-index: -1
+  .title
+    color: $color-gris
+    font-family: $circular-black
+    font-size: 4rem
+    text-transform: uppercase
+  p
+    color: darken($color-gris,35%)
+    font-family: $roboto
+    font-weight: 700
+    font-size: 2rem
+    text-align: center
+  @media (min-width: 992px)
+    figure
+      position: relative
+      z-index: 0
+      &::before
+        content: ""
+        width: 100%
+        height: 100%
+        background-color: $color-marca
+        position: absolute
+        top: -2rem
+        left: -5rem
+        z-index: -1
+    .title
+      color: $color-gris
+      font-family: $circular-black
+      font-size: 4rem
+      text-transform: uppercase
+      position: relative
+      &::before
+        content: ""
+        width: 25%
+        height: 1rem
+        background-color: $color-marca
+        position: absolute
+        bottom: -1rem
+        left: 5%
+    p
+      color: darken($color-gris,25%)
+      font-family: $roboto
+      font-weight: 400
+      font-size: 1.25rem
+      text-align: left
+/*Servicios*/
+#servicios
+  height: 100vh
+  min-height: 775px
+  padding-top: 6rem
+  padding-bottom: 0
+  .title
+    color: darken($color-gris,25%)
+    font-family: $circular-black
+    font-size: 4rem
+    text-transform: uppercase
+    position: relative
+    text-align: center
+  .services
+    list-style: none
+    height: 47.5vh
+    margin-bottom: 5rem
+    position: relative
+    margin-top: 2rem
+    li
+      background-color: lighten($color-blanco, 40%)
+      height: 15vh
+      position: relative
+      padding: 2rem 0rem !important
+      margin-bottom: .5rem
+      h3
+        font-size: 3rem
+      p
+        font-size: 2rem
+      &:nth-child(1)::after
+        content: url(../images/star-grey.png)
+        position: absolute
+        left: 47.5%
+        top: -.75rem
+        z-index: 1
+        transform: scale(.75)
+      &:nth-child(2)::after
+        content: url(../images/star-black.png)
+        position: absolute
+        left: 40%
+        top: -.5rem
+        z-index: 1
+        transform: scale(.75)
+      &:nth-child(2) h3
+        position: relative
+        &::after
+          content: url(../images/star-black.png)
+          position: absolute
+          left: 47.5%
+          top: -2.5rem
+          z-index: 1
+          transform: scale(.75)
+        &::before
+          content: url(../images/star-black.png)
+          position: absolute
+          left: 55%
+          top: -2.5rem
+          z-index: 1
+          transform: scale(.75)
+      h3
+        i
+          color: $color-marca
+          padding: 0rem .5rem
+  article
+    h3
+      font-size: 3rem
+    p
+      font-size: 2rem
+  @media (min-width: 992px)
+    height: 100vh
+    min-height: 775px
+    padding-top: 6rem
+    padding-bottom: 0
+    .title
+      color: darken($color-gris,25%)
+      font-family: $circular-black
+      font-size: 4rem
+      text-transform: uppercase
+      position: relative
+      text-align: center
+    .services
+      list-style: none
+      height: 15vh
+      margin-bottom: 5rem
+      margin-top: 0rem
+      position: relative
+      li
+        background-color: $color-blanco
+        height: 12rem
+        position: relative
+        padding: 2rem 0rem !important
+        h3
+          font-size: 1.5rem
+        p
+          font-size: 1rem
+        &:nth-child(1)::before
+          content: ""
+          width: 35%
+          height: 55%
+          background-color: darken($color-blanco, 15%)
+          position: absolute
+          left: -.5rem
+          bottom: -.5rem
+          z-index: -1
+        &:nth-child(2)::before
+          content: ""
+          width: 35%
+          height: 55%
+          background-color: darken($color-gris, 25%)
+          position: absolute
+          right: -.5rem
+          top: -.5rem
+          z-index: -1
+        &:nth-child(3)::before
+          content: ""
+          width: 28%
+          height: 55%
+          background-color: darken($color-blanco, 60%)
+          position: absolute
+          right: -.5rem
+          bottom: -.5rem
+          z-index: -1
+        &:nth-child(1)::after
+          content: url(../images/star-grey.png)
+          position: absolute
+          left: 45%
+          top: -.5rem
+          z-index: 1
+          transform: scale(.75)
+        &:nth-child(2)::after
+          content: url(../images/star-black.png)
+          position: absolute
+          left: 25%
+          top: -.5rem
+          z-index: 1
+          transform: scale(.75)
+        &:nth-child(2) h3
+          position: relative
+          &::after
+            content: url(../images/star-black.png)
+            position: absolute
+            left: 40%
+            top: -2.5rem
+            z-index: 1
+            transform: scale(.75)
+          &::before
+            content: url(../images/star-black.png)
+            position: absolute
+            left: 55%
+            top: -2.5rem
+            z-index: 1
+            transform: scale(.75)
+        h3
+          i
+            color: $color-marca
+            padding: 0rem .5rem
+    article
+      h3
+        font-size: 1.5rem
+      p
+        font-size: 1rem
+
+#producciones
+  height: 100vh
+  min-height: 775px
+  padding-top: 6rem
+  padding-bottom: 0
+  .title
+    color: darken($color-gris,25%)
+    font-family: $circular-black
+    font-size: 4rem
+    text-transform: uppercase
+    position: relative
+    text-align: center
+  .produccions
+    list-style: none
+    height: 65vh
+    margin-bottom: 5rem
+    margin-top: 0rem
+    position: relative
+    background-color: $color-marca
+    padding: 0rem 3.25rem
+    &:nth-child(1)::before
+      position: absolute
+      content: ""
+      width: 150%
+      height: 100%
+      border: 1rem solid darken($color-blanco,15%)
+      top: 15%
+      left: 50%
+      z-index: -1
+    li
+      height: 15vh
+      position: relative
+      padding: 2rem 0rem !important
+      color: $color-blanco
+      a
+        color: $color-blanco
+        text-decoration: none
+        transition: all .25s
+        &:active, &:hover, &:focus
+          color: darken($color-blanco, 10%)
+          text-decoration: none
+      h3
+        font-size: 1.5rem
+      p
+        font-size: 1rem
+#blog
+  height: 100vh
+  min-height: 775px
+  padding-top: 6rem
+  padding-bottom: 0
+  .title
+    color: darken($color-gris,25%)
+    font-family: $circular-black
+    font-size: 4rem
+    text-transform: uppercase
+    position: relative
+    text-align: center
+  article
+    h4
+      color: $color-marca
+      font-family: $circular-black
+      font-size: 2rem
+    p
+      b
+        color: darken($color-gris, 5%)
+        font-family: $roboto
+        font-size: 1.25rem
+        font-weight: 700
+      color: darken($color-gris, 15%)
+      font-family: $roboto
+      font-size: 1rem
+      font-weight: 400
+
+#contacto
+  height: 100vh
+  min-height: 775px
+  padding-top: 6rem
+  padding-bottom: 0
+  .title
+    color: darken($color-gris,25%)
+    font-family: $circular-black
+    font-size: 4rem
+    text-transform: uppercase
+    position: relative
+    text-align: center
+  article
+    p
+      color: darken($color-gris, 5%)
+      font-family: $circular-black
+      font-size: 1.5rem
+      text-transform: uppercase
+      font-weight: normal
+      background-color: $color-blanco
+      position: relative
+      &::before
+        content: ""
+        width: 50%
+        height: 150%
+        border: .25rem solid $color-marca
+        position: absolute
+        right: -4rem
+        bottom: -8rem
+        z-index: -1
+
+  form
+    .form-control
+      font-family: $roboto
+      font-weight: 400
+      color: $color-marca
+      background-color: transparent
+      border-top: .05rem solid $color-gris
+      border-left: none
+      border-right: .05rem solid $color-gris
+      border-bottom: .05rem solid $color-gris
+      outline: none
+      box-shadow: 0 0 0  rgba(0, 123, 255, 0)
+    .form-control:focus
+      color: $color-marca
+      background-color: transparent
+      border-top: .05rem solid $color-marca
+      border-left: none
+      border-right: .05rem solid $color-marca
+      border-bottom: .05rem solid $color-marca
+      outline: none
+      box-shadow: 0 0 0  rgba(0, 123, 255, 0)
+    textarea
+      resize: none
+      max-height: 12rem
+      overflow-x: hidden
+      overflow-y: scroll
+.loader-container
+  background: #fff
+  bottom: 0
+  left: 0
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 9999
+  .loader
+    display: block
+    position: absolute
+    font-size: 0
+    color: $color-marca
+    left: 50%
+    top: 50%
+    width: 42px
+    height: 42px
+    -webkit-transform: translateY(-50%) translateX(-50%)
+    -ms-transform: translateY(-50%) translateX(-50%)
+    transform: translateY(-50%) translateX(-50%)
+    > div
+      position: absolute
+      top: 50%
+      left: 50%
+      border-radius: 100%
+      display: inline-block
+      float: none
+      background-color: transparent
+      border: 0 solid transparent
+      &:first-child
+        position: absolute
+        width: 42px
+        height: 42px
+        background: transparent
+        border-style: solid
+        border-width: 3px
+        border-right-color: transparent
+        border-left-color: transparent
+        -webkit-animation: ball-clip-rotate-pulse-rotate 1s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite
+        animation: ball-clip-rotate-pulse-rotate 1s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite
+      &:last-child
+        width: 21px
+        height: 21px
+        -webkit-animation: ball-clip-rotate-pulse-scale 1s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite
+        animation: ball-clip-rotate-pulse-scale 1s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite
+
+@keyframes ball-clip-rotate-pulse-rotate
+  0%
+    -webkit-transform: translate(-50%, -50%) rotate(0)
+    transform: translate(-50%, -50%) rotate(0)
+
+  50%
+    -webkit-transform: translate(-50%, -50%) rotate(180deg)
+    transform: translate(-50%, -50%) rotate(180deg)
+
+  100%
+    -webkit-transform: translate(-50%, -50%) rotate(360deg)
+    transform: translate(-50%, -50%) rotate(360deg)

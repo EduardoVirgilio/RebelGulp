@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="icon" type="image/png" href="/images/logo-icon.png")
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/fontawesome/css/all.min.css')
+    link(rel='stylesheet', href='/css/animate.min.css')
+    link(rel='stylesheet', href='/css/circular-std/style.css')
+    link(href="https://fonts.googleapis.com/css?family=Roboto" rel='stylesheet')
+    link(rel='stylesheet', href='/css/main.css')
+  body(id='page-top')
+    #pre-loader.loader-container
+      .loader
+        div
+        div
+    include modules/rebel-navbar
+    include modules/rebel-header
+    main
+      include modules/rebel-team
+      include modules/rebel-services
+      include modules/rebel-produccion
+      include modules/rebel-blog
+      include modules/rebel-contacto
+      include modules/rebel-footer
+    footer
+      script(src='/js/jquery.min.js', type='application/javascript', charset="UTF-8")
+      script(src='/js/popper.min.js', type='application/javascript', charset="UTF-8")
+      script(src='/js/bootstrap.min.js', type='application/javascript', charset="UTF-8")
+      script(src='/javascripts/wow.min.js', type='application/javascript', charset="UTF-8")
+      //script(src='/js/jquery.easing.min.js', type='application/javascript', charset="UTF-8" )
+      //script(src='/js/rebel.js', type='application/javascript', charset='UTF-8')
