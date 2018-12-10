@@ -3,7 +3,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const pug = require('gulp-pug');
 
-gulp.task('sass', () => {
+gulp.task('sass', function () {
   return gulp.src([
     'node_modules/bootstrap/scss/bootstrap.scss',
     'node_modules/wow.js/css/libs/animate.css',
@@ -14,7 +14,7 @@ gulp.task('sass', () => {
   .pipe(browserSync.stream());
 });
 
-gulp.task('pug', () => {
+gulp.task('pug', function () {
   return gulp.src([
     'src/pug/*.pug'
   ])
@@ -26,7 +26,7 @@ gulp.task('pug', () => {
 });
 
 
-gulp.task('js', () => {
+gulp.task('js', function () {
   return gulp.src([
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/jquery/dist/jquery.min.js',
@@ -37,7 +37,7 @@ gulp.task('js', () => {
   .pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['sass'], () => {
+gulp.task('serve', ['sass'], function () {
   browserSync.init({
     server: './src'
   });
@@ -51,14 +51,14 @@ gulp.task('serve', ['sass'], () => {
 
 });
 
-gulp.task('font-awesome', () => {
+gulp.task('font-awesome', function () {
   return gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
   .pipe(gulp.dest('dist/css'));
 })
 
-gulp.task('fonts', () => {
+gulp.task('fonts', function () {
   return gulp.src('node_modules/font-awesome/fonts/*')
     .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('develop', ['js', 'serve', 'font-awesome', 'fonts', 'pug'])
+gulp.task('default',['sass','pug','js','font-awesome','fonts','serve']);
