@@ -61,4 +61,4 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts'));
 });
 
-gulp.task('default', ['js', 'serve', 'font-awesome', 'fonts', 'pug'])
+gulp.task('develop', ['js', 'serve', 'font-awesome', 'fonts', 'pug'])
