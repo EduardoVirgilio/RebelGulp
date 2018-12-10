@@ -1,7 +1,7 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const pug = require('gulp-pug');
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var pug = require('gulp-pug');
 
 gulp.task('sass', function () {
   return gulp.src([
